@@ -1,0 +1,170 @@
+body {
+    font-family: 'Inter', sans-serif;
+    color: #818181;
+    background-color: #FFFDFA;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+p {
+    font-size: 12px;
+}
+
+
+
+
+/* ENTIRE POST TEMPLATE */
+.post-template {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 900px;
+    padding: 50px;
+}
+
+
+
+/* POST IMAGE - LEFT SIDE*/
+.post-image {
+    width: 500px;
+}
+
+.post-pic {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* HOVER FOR HEART/LIKE FEATURE BUT I DIDN"T FIGURE IT OUT YET */
+
+/* .post-saved {
+    width: 35px;
+    position: absolute;
+    bottom: 180px;
+    left: 635px;
+
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.post-image:hover > .post-saved{
+    opacity: 1;
+} */
+
+
+
+
+
+/* ENTIRE POST DESCRIPTION - RIGHT SIDE*/
+.post-description {
+    width: 400px;
+    padding-left: 50px;
+}
+
+/* POST USER NAME INFO*/
+    .post-user {
+        display: flex;
+    }
+
+    .post-user-image {
+        width: 50px;
+        height: 50px;
+        padding-right: 10px;
+    }
+
+    .post-user-info {
+        line-height: 0px;
+    }
+
+    .post-user-name {
+        color: black;
+    }
+
+
+/* POST TAGS */
+    .post-tags {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .time {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 80px;
+        height: 30px;
+        padding: 1px;
+
+        border: 2px solid #818181;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+
+    .vegan {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 75px;
+        height: 30px;
+        padding: 1px;
+
+        border: 2px solid #818181;
+        border-radius: 10px;
+        background-color: #D6E0A2;
+    }
+
+    .post-icons {
+        width: 15px;
+        height: 15px;
+    }
+
+
+/* POST INGREDIENTS */
+.post-ingredients {
+    margin-top: 25px;
+    border: 2px solid #818181;
+    border-radius: 10px;
+
+    width: 300px;
+    padding: 20px;
+    padding-top: 5px;
+}
+
+
+/* POST ENGAGEMENT */
+.post-engagement {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.texteng {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-right: 10px;
+}
+
+.iconeng {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
+
+.iconengf {
+    height: 20px;
+    padding-right: 5px;
+}
