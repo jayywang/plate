@@ -1,1 +1,1 @@
-https://jayywang.github.io/table/
+https://jayywang.github.io/plate
