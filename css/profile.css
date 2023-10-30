@@ -1,0 +1,68 @@
+h1{
+	font-size: 50px;
+	color: black;
+}
+
+h3{
+	font-size: 15px;
+}
+
+/* LEFT PROFILE BOX */
+#left-box {
+  border: 1px solid gray;
+  height: 550px;
+  width: 300px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  float: left;
+  margin-left: 100px;
+  color: black;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profilepic {
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#left-box h3 {
+  font-size: 18px;
+  color: gray;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+hr{
+	width: 100%;
+	color: gray;
+}
+
+.p-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust this margin as needed for spacing */
+}
+
+.p-container img {
+  margin-right: 5px; /* Adjust this margin as needed for spacing */
+  width: 30px;
+}
+
+
+/* RIGHT PROFILE BOX */
+#right-box{
+	border: solid;
+	height: 500px;
+	width: 600px;
+	float: left;
+	margin-left: 50px;
+}
