@@ -1,6 +1,11 @@
 h1{
 	font-size: 50px;
 	color: black;
+	margin-bottom: 20px;
+}
+
+h2{
+	color: black;
 }
 
 h3{
@@ -60,9 +65,46 @@ hr{
 
 /* RIGHT PROFILE BOX */
 #right-box{
-	border: solid;
 	height: 500px;
 	width: 600px;
 	float: left;
 	margin-left: 50px;
+}
+
+.middle-bar{
+	width: 260px;
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.joined, .edit-profile {
+  width: 100%; 
+}
+
+.joined {
+  text-align: left;
+  color: black;
+}
+
+.edit-profile {
+  text-align: left;
+}
+
+.quotes{
+	width: 70px;
+	margin-top: 20px;
+}
+
+.bio p{
+	color: black;
+	font-size: 15px;
+}
+
+#right-box hr{
+	margin-top: 50px;
+}
+
+.bottom-bar{
+	color: black;
+	margin-top: 20px;
 }
