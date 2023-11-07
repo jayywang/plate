@@ -70,3 +70,62 @@ h1 {
 .clearfloat {
 	clear: both;
 }
+
+
+
+/* JAY'S CONTRIBUTION */
+
+#both-containers {
+    display: flex;
+}
+
+
+#side-column{
+    width: 20%;
+    padding-top: 10px;
+}
+
+#create-post-button {
+    width: 90%;
+	border: 2px solid #CCC;
+ 	border-radius: 5px;
+ 	margin: 10px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	box-shadow: 2px 2px #888888;
+
+    background-color:#CFDEC0;
+}
+
+
+#column-trending {
+    width: 90%;
+	border: 2px solid #CCC;
+ 	border-radius: 5px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	box-shadow: 2px 2px #888888;
+}
+
+.green {
+    background-color:#CFDEC0;
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.trending-post {
+    padding: 10px;
+
+
+}
+
+.trending-post-user-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.trending-post-user-info p {
+    font-size: 13px;
+    padding-left: 4px;
+}
