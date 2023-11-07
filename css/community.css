@@ -78,6 +78,7 @@ h1 {
 
 #both-containers {
     display: flex;
+    flex-direction: row;
 }
 
 
