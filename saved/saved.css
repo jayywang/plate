@@ -1,0 +1,71 @@
+body {
+	font-family: 'Inter', sans-serif;
+	color: black;
+	background-color: #FFFDFA;
+    
+}
+
+#main {
+    padding-top: 20px;
+}
+
+.clearfloat {
+	clear: both;
+}
+
+.savedposts {
+    width: 200px;
+    margin-top: 10px;
+
+   
+}
+
+#avo :hover {
+    box-shadow: 10px 10px 5px #000000;
+  -moz-box-shadow: 0px 10px 5px #000000;
+-webkit-box-shadow: 0px 10px 5px #000000; 
+opacity: 0.5;
+}
+
+#soup :hover {
+    box-shadow: 10px 10px 5px #000000;
+  -moz-box-shadow: 0px 10px 5px #000000;
+-webkit-box-shadow: 0px 10px 5px #000000; 
+opacity: 0.5;
+}
+
+#chicken :hover {
+    box-shadow: 10px 10px 5px #000000;
+  -moz-box-shadow: 0px 10px 5px #000000;
+-webkit-box-shadow: 0px 10px 5px #000000; 
+opacity: 0.5;
+}
+
+#pics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: top;
+    
+}
+
+
+#sicon {
+    width: 35px;
+    margin-right: 5px;
+    
+}
+
+
+#head {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 480px;
+}
+
+.pic-text {
+    text-align: center;
+}
+
