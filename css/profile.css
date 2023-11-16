@@ -62,6 +62,14 @@ hr{
   width: 30px;
 }
 
+.p-container a {
+    display: flex;        
+    align-items: center;  
+    gap: 10px;            
+    text-decoration: none; 
+    color: inherit;        
+}
+
 
 /* RIGHT PROFILE BOX */
 #right-box{

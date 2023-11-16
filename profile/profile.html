@@ -14,6 +14,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
+<style>
+    a{
+        text-decoration: none;
+        color: inherit; 
+        display: block; 
+    } 
+</style>
+
 </head>    
 <body>
 
@@ -38,21 +46,27 @@
 <div id="left-box">
   <div class="profile-container">
     <img class="profilepic" src="../img/gregory.png" alt="Profile Picture">
-    <h3>Update photo</h3>
+    <h3 id="updatePhoto">Update photo</h3>
     <hr> <!-- horizontal line -->
         <div class="p-container">
-          <img src="../img/reviews.png" alt="Review Icon">
-          <p>Reviews</p>
+            <a href="../coming/coming.html">
+                  <img src="../img/reviews.png" alt="Review Icon">
+                  <p>Reviews</p>
+            </a>
         </div>
 
         <div class="p-container">
-          <img src="../img/savedicon.png" alt="Saved Icon">
-          <p>8 Saved</p>
+            <a href="../saved/saved.html">
+                <img src="../img/savedicon.png" alt="Saved Icon">
+                <p>8 Saved</p>
+            </a>
         </div>
 
         <div class="p-container">
-          <img src="../img/communityicon.png" alt="Post Icon">
-          <p>3 Posts</p>
+        <a href="../community/community.html">
+              <img src="../img/communityicon.png" alt="Post Icon">
+              <p>3 Posts</p>
+        </a>
         </div>
 
         <div class="p-container">
@@ -61,8 +75,10 @@
         </div>
     <hr> <!-- horizontal line -->
     <div class="p-container">
+        <a href="../coming/coming.html">
           <img src="../img/signout.png" alt="Sign Out Icon">
           <h3>Sign out</h3>
+        </a>
         </div>
   </div>
 </div><!-- LEFT BOX -->
@@ -74,7 +90,7 @@
 
     <div class="middle-bar">
       <div class="joined">Joined in 2023 |</div>
-      <div class="edit-profile">Edit Profile</div>
+      <div class="edit-profile" id="editProfile">Edit Profile</div>
     </div>
 
     <h2>@grubbingregory</h2>
@@ -100,6 +116,23 @@
     </div><!-- bottom bar -->
 
 </div><!-- RIGHT BOX -->
+
+<script>
+    var editProfileButton = document.getElementById('editProfile');
+
+    // Add click event listener
+    editProfileButton.addEventListener('click', function() {
+        alert('Edited Profile!');
+    });
+
+    var updatePhotoButton = document.getElementById('updatePhoto');
+
+    // Add click event listener to update photo
+    updatePhotoButton.addEventListener('click', function() {
+        alert('Updated Photo!');
+    });
+
+</script>
 
 </body>
 <html>
