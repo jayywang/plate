@@ -86,7 +86,7 @@
 
         <div class="post-engagement">
             <div class="texteng">
-                <img class="iconeng" src="img/savedicong.png" alt="saved icon">
+                <img class="iconeng heart" src="img/savedicong.png" alt="saved icon">
                 <p>103 Likes</p>
             </div>
             <div class="texteng">
@@ -155,7 +155,7 @@
 
         <div class="post-engagement">
             <div class="texteng">
-                <img class="iconeng" src="img/savedicong.png" alt="saved icon">
+                <img class="iconeng heart" src="img/savedicong.png" alt="saved icon">
                 <p>103 Likes</p>
             </div>
             <div class="texteng">
@@ -224,7 +224,7 @@
 
         <div class="post-engagement">
             <div class="texteng">
-                <img class="iconeng" src="img/savedicong.png" alt="saved icon">
+                <img class="iconeng heart" src="img/savedicong.png" alt="saved icon">
                 <p>103 Likes</p>
             </div>
             <div class="texteng">
@@ -241,7 +241,91 @@
 
 </div>
 
+<script>
+    var saveIcons = document.querySelectorAll('.heart');
+    var flagIcons = document.querySelectorAll('.iconengf');
+    var filledSave = 'img/saved-fill.svg';
+    var filledFlag = 'img/flag-fill.svg';
 
+    //START HEART ICONS
+    saveIcons.forEach(function(saveIcon) {
+    //Hover Functions
+        saveIcon.addEventListener('mouseover', function () {
+            if (!saveIcon.classList.contains('liked')) {
+                saveIcon.src = filledSave;
+            }
+         });
+
+        saveIcon.addEventListener('mouseout', function () {
+            if (!saveIcon.classList.contains('liked')) {
+                saveIcon.src = 'img/savedicong.png';
+            }
+        });
+
+        //Click Functions
+        saveIcon.addEventListener('click', function(){
+            var postDiv = saveIcon.closest('.texteng');
+
+            if(postDiv) {
+                var heartText = postDiv.querySelector('p');
+
+                if (saveIcon.src.endsWith('saved-fill.svg')) {
+                saveIcon.src = 'img/savedicong.png';
+                saveIcon.classList.remove('liked');
+                heartText.textContent = '103 Likes';
+
+                } else {
+                saveIcon.src = filledSave;
+                saveIcon.classList.add('liked');
+                heartText.textContent = '104 Likes';
+                }
+
+            }
+
+        });
+    });
+    //END HEART ICONS
+
+    //START FLAG ICONS
+    flagIcons.forEach(function(flagIcon) {
+    //Hover Functions
+        flagIcon.addEventListener('mouseover', function () {
+            if (!flagIcon.classList.contains('saved')) {
+                flagIcon.src = filledFlag;
+            }
+         });
+
+        flagIcon.addEventListener('mouseout', function () {
+            if (!flagIcon.classList.contains('saved')) {
+                flagIcon.src = 'img/flagicon.png';
+            }
+        });
+
+        //Click Functions
+        flagIcon.addEventListener('click', function(){
+            var postDivf = flagIcon.closest('.texteng');
+
+            if(postDivf) {
+                var flagText = postDivf.querySelector('p');
+
+                if (flagIcon.src.endsWith('flag-fill.svg')) {
+                flagIcon.src = 'img/flagicon.png';
+                flagIcon.classList.remove('saved');
+                flagText.textContent = '23 Saves';
+
+                } else {
+                flagIcon.src = filledFlag;
+                flagIcon.classList.add('saved');
+                flagText.textContent = '24 Saves';
+                }
+
+            }
+
+        });
+    });
+    //END FLAG ICONS
+
+</script>
 
 
 </body>
