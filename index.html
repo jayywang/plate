@@ -584,14 +584,14 @@
     var filledSave = 'img/saved-fill.svg';
     var filledFlag = 'img/flag-fill.svg';
 
-    //START HEART ICONS
-    saveIcons.forEach(function(saveIcon) {
-    //Hover Functions
+    // START HEART ICONS
+    saveIcons.forEach(function (saveIcon) {
+        // Hover Functions
         saveIcon.addEventListener('mouseover', function () {
             if (!saveIcon.classList.contains('liked')) {
                 saveIcon.src = filledSave;
             }
-         });
+        });
 
         saveIcon.addEventListener('mouseout', function () {
             if (!saveIcon.classList.contains('liked')) {
@@ -599,38 +599,36 @@
             }
         });
 
-        //Click Functions
-        saveIcon.addEventListener('click', function(){
+        // Click Functions
+        saveIcon.addEventListener('click', function () {
             var postDiv = saveIcon.closest('.texteng');
 
-            if(postDiv) {
+            if (postDiv) {
                 var heartText = postDiv.querySelector('p');
+                var likesCount = parseInt(heartText.textContent);
 
                 if (saveIcon.src.endsWith('saved-fill.svg')) {
-                saveIcon.src = 'img/savedicong.png';
-                saveIcon.classList.remove('liked');
-                heartText.textContent = '103 Likes';
-
+                    saveIcon.src = 'img/savedicong.png';
+                    saveIcon.classList.remove('liked');
+                    heartText.textContent = likesCount + 1 + ' Likes';
                 } else {
-                saveIcon.src = filledSave;
-                saveIcon.classList.add('liked');
-                heartText.textContent = '104 Likes';
+                    saveIcon.src = filledSave;
+                    saveIcon.classList.add('liked');
+                    heartText.textContent = likesCount - 1 + ' Likes';
                 }
-
             }
-
         });
     });
-    //END HEART ICONS
+    // END HEART ICONS
 
-    //START FLAG ICONS
-    flagIcons.forEach(function(flagIcon) {
-    //Hover Functions
+    // START FLAG ICONS
+    flagIcons.forEach(function (flagIcon) {
+        // Hover Functions
         flagIcon.addEventListener('mouseover', function () {
             if (!flagIcon.classList.contains('saved')) {
                 flagIcon.src = filledFlag;
             }
-         });
+        });
 
         flagIcon.addEventListener('mouseout', function () {
             if (!flagIcon.classList.contains('saved')) {
@@ -638,29 +636,27 @@
             }
         });
 
-        //Click Functions
-        flagIcon.addEventListener('click', function(){
+        // Click Functions
+        flagIcon.addEventListener('click', function () {
             var postDivf = flagIcon.closest('.texteng');
 
-            if(postDivf) {
+            if (postDivf) {
                 var flagText = postDivf.querySelector('p');
+                var savesCount = parseInt(flagText.textContent);
 
                 if (flagIcon.src.endsWith('flag-fill.svg')) {
-                flagIcon.src = 'img/flagicon.png';
-                flagIcon.classList.remove('saved');
-                flagText.textContent = '23 Saves';
-
+                    flagIcon.src = 'img/flagicon.png';
+                    flagIcon.classList.remove('saved');
+                    flagText.textContent = savesCount + 1 + ' Saves';
                 } else {
-                flagIcon.src = filledFlag;
-                flagIcon.classList.add('saved');
-                flagText.textContent = '24 Saves';
+                    flagIcon.src = filledFlag;
+                    flagIcon.classList.add('saved');
+                    flagText.textContent = savesCount - 1 + ' Saves';
                 }
-
             }
-
         });
     });
-    //END FLAG ICONS
+    // END FLAG ICONS
 
 </script>
 
