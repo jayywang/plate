@@ -607,14 +607,14 @@
                 var heartText = postDiv.querySelector('p');
                 var likesCount = parseInt(heartText.textContent);
 
-                if (saveIcon.src.endsWith('saved-fill.svg')) {
+                if (saveIcon.classList.contains('liked')) {
                     saveIcon.src = 'img/savedicong.png';
                     saveIcon.classList.remove('liked');
-                    heartText.textContent = likesCount + 1 + ' Likes';
+                    heartText.textContent = likesCount - 1 + ' Likes';
                 } else {
                     saveIcon.src = filledSave;
                     saveIcon.classList.add('liked');
-                    heartText.textContent = likesCount - 1 + ' Likes';
+                    heartText.textContent = likesCount + 1 + ' Likes';
                 }
             }
         });
@@ -644,14 +644,14 @@
                 var flagText = postDivf.querySelector('p');
                 var savesCount = parseInt(flagText.textContent);
 
-                if (flagIcon.src.endsWith('flag-fill.svg')) {
+                if (flagIcon.classList.contains('saved')) {
                     flagIcon.src = 'img/flagicon.png';
                     flagIcon.classList.remove('saved');
-                    flagText.textContent = savesCount + 1 + ' Saves';
+                    flagText.textContent = savesCount - 1 + ' Saves';
                 } else {
                     flagIcon.src = filledFlag;
                     flagIcon.classList.add('saved');
-                    flagText.textContent = savesCount - 1 + ' Saves';
+                    flagText.textContent = savesCount + 1 + ' Saves';
                 }
             }
         });
