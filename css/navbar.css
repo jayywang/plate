@@ -38,7 +38,7 @@
 
 
 #navigation-icons-right {
-    width: 175px;
+    width: 200px;
 
     display: flex;
     justify-content: space-between;
@@ -52,7 +52,7 @@
 }
 
 .icons {
-    width: 40px;
+    width: 35px;
 }
 
 .usericon {
