@@ -64,8 +64,9 @@
 
         <div id="searchbar">
             <img class="searchicon" src="img/searchicon.png">
-            <form>
-                <input class="search" type="text" placeholder="Search for a recipe, ingredient, etc.">
+            <form action="plate_search_results" method="POST">
+                <input class="search" type="text" placeholder="Search for a recipe, ingredient, etc." name="recipe_name">
+                <button type="submit" class="search">Search</button>
             </form>
         </div>
 
