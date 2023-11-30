@@ -1,0 +1,704 @@
+<?php
+    $host = "304.itpwebdev.com";
+    $user = "plate";
+    $pass = "uscitp2023";
+    $db = "plate_plate_db";
+
+    /// Create the connection object.
+    $mysqli = new mysqli($host, $user, $pass, $db);
+
+    // Check for any connection errors.
+    // In JS: object.property
+    //          person.firstName
+    // In PHP: object->property
+    //          person->firstName
+    if ( $mysqli->connect_errno ) {
+        echo $mysqli->connect_error;
+        exit(); // Terminates PHP script.
+    }
+
+
+    // 2. Generate & Submit SQL Statement(s).
+    $sql = "SELECT * FROM recipe;";
+
+    $results = $mysqli->query($sql);
+
+    // Check for any SQL errors.
+    if ($results == false) {
+        echo $mysqli->error;
+        $mysqli->close();
+        exit();
+    }
+
+    
+
+    // 3. Close the DB Connection.
+    $mysqli->close();
+
+    ?>
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Plate | A Food Website</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+</head>    
+<body>
+
+<div>
+    <a href="explore/explore.html"><img class="explore" src="img/exploreicon.png" alt="explore icon"></a>
+</div>
+
+<!-- NAVIGATION BAR -->
+<div id="navigation">
+        <a href="index.html"><img class="logo" src="img/plate.png" alt="plate logo"></a>
+
+        <div id="searchbar">
+            <img class="searchicon" src="img/searchicon.png">
+            <form>
+                <input class="search" type="text" placeholder="Search for a recipe, ingredient, etc.">
+            </form>
+        </div>
+
+        <div id="navigation-icons-right">
+            <a href="explore/explore.html"><img class="icons" src="img/explore-icon.svg" alt="explore icon"></a>
+            <a href="community/community.html"><img class="icons" src="img/communityicon.png" alt="community icon"></a>
+            <a href="saved/saved.html"><img class="icons" src="img/savedicon.png" alt="saved icon"></a>
+            <a href="profile/profile.html"><img class="usericon" src="img/usericon.png" alt="usericon"></a>
+        </div>   
+</div>
+
+
+<!-- MAIN FEED -->
+<!-- POST 1 -->
+<div class="post-template">
+    <div class="post-image">
+        <!-- <img class="post-saved" src="img/savedicon.png" alt="saved icon"> -->
+        <img class="post-pic" src="img/post1/test.png" alt="post 1 test image">
+    </div>
+    
+
+    <div class="post-description">
+        <div class="post-user">
+            <img class="post-user-image" src="img/post1/userimage.png" alt="post 1 test user image">
+            <div class="post-user-info">
+                <h2 class="post-user-name">Sarah Sibrian</h2>
+                <p>@sarahbecooking</p>
+            </div>
+        </div>
+
+        <div class="post-caption">
+            <h3>Cauliflower greens salad with arugula, chickpeas, pomogranate, and more!</h3>
+
+        </div>
+
+        <div class="post-tags">
+            <div class="time">
+                <img class="post-icons" src="img/timeicon.png" alt="time icon">
+                <p>10 min</p>
+            </div>
+
+            <div class="vegan">
+                <img class="post-icons" src="img/veganicon.png" alt="vegan icon">
+                <p>Vegan</p>
+            </div>
+
+        </div>
+
+        <div class="post-ingredients">
+            <h3>Ingredient List</h3>
+            <ul>
+                <li>1 head of Cauliflower</li>
+                <li>1/3 Cup of Lettuce</li>
+                <li>1/3 Cup of Spinach</li>
+                <li>1/2 Cup of Chickpeas</li>
+                <li>1 Cup of Pomogranate Seeds</li>
+                <li>1/2 Lemon </li>
+                <li>Olive Oil</li>
+                <li>Balsamic Vinegarette</li>
+            </ul>
+
+        </div>
+
+        <div class="post-engagement">
+            <div class="texteng">
+                <img class="heart" src="img/savedicong.png" alt="saved icon">
+                <p>103 Likes</p>
+            </div>
+            <div class="texteng">
+                <img class="iconengf" src="img/flagicon.png" alt="flag icon">
+                <p>23 Saves</p>
+            </div>
+            <div class="texteng">
+                <img class="iconeng" src="img/cookedicon.png" alt="cooked icon">      
+                <p>17 Recipes Made</p>  
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- POST 2 -->
+<div class="post-template">
+    <div class="post-image">
+        <!-- <img class="post-saved" src="img/savedicon.png" alt="saved icon"> -->
+        <img class="post-pic" src="img/post2/test.png" alt="post 2 test image">
+    </div>
+    
+
+    <div class="post-description">
+        <div class="post-user">
+            <img class="post-user-image" src="img/post2/userimage.png" alt="post 2 test user image">
+            <div class="post-user-info">
+                <h2 class="post-user-name">Joseph Taylor</h2>
+                <p>@josephtaylorcooks</p>
+            </div>
+        </div>
+
+        <div class="post-caption">
+            <h3>A traditional Hawaiian dish featuring raw fish, typically served as a salad or appetizer</h3>
+
+        </div>
+
+        <div class="post-tags">
+            <div class="time">
+                <img class="post-icons" src="img/timeicon.png" alt="time icon">
+                <p>15 min</p>
+            </div>
+
+        </div>
+
+        <div class="post-ingredients">
+            <h3>Ingredient List</h3>
+            <ul>
+                <li>1 pound sushi-grade ahi tuna</li>
+                <li>1/4 cup soy sauce</li>
+                <li>1 tablespoon sesame oil</li>
+                <li>1 tablespoon rice vinegar</li>
+                <li>1 teaspoon ginger, minced</li>
+                <li>1 teaspoon garlic, minced</li>
+                <li>1 teaspoon sesame seeds</li>
+                <li>2 cups cooked sushi rice</li>
+            </ul>
+
+        </div>
+
+        <div class="post-engagement">
+            <div class="texteng">
+                <img class="heart" src="img/savedicong.png" alt="saved icon">
+                <p>63 Likes</p>
+            </div>
+            <div class="texteng">
+                <img class="iconengf" src="img/flagicon.png" alt="flag icon">
+                <p>12 Saves</p>
+            </div>
+            <div class="texteng">
+                <img class="iconeng" src="img/cookedicon.png" alt="cooked icon">      
+                <p>7 Recipes Made</p>  
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- POST 3 -->
+<div class="post-template">
+    <div class="post-image">
+        <!-- <img class="post-saved" src="img/savedicon.png" alt="saved icon"> -->
+        <img class="post-pic" src="img/post3/test.png" alt="post 3 test image">
+    </div>
+    
+
+    <div class="post-description">
+        <div class="post-user">
+            <img class="post-user-image" src="img/post3/userimage.png" alt="post 3 test user image">
+            <div class="post-user-info">
+                <h2 class="post-user-name">Megan Otan</h2>
+                <p>@meganinthekitchen</p>
+            </div>
+        </div>
+
+        <div class="post-caption">
+            <h3>Avocado toast is a simple and delicious dish that's perfect for breakfast or as a light meal</h3>
+
+        </div>
+
+        <div class="post-tags">
+            <div class="time">
+                <img class="post-icons" src="img/timeicon.png" alt="time icon">
+                <p>20 min</p>
+            </div>
+
+            <div class="vegan">
+                <img class="post-icons" src="img/veganicon.png" alt="vegan icon">
+                <p>Vegan</p>
+            </div>
+
+        </div>
+
+        <div class="post-ingredients">
+            <h3>Ingredient List</h3>
+            <ul>
+                <li>2 slices of bread </li>
+                <li>1 ripe avocad0</li>
+                <li>1/2 cup of Tomatoes</li>
+                <li>Salt</li>
+                <li>Pepper</li>
+                <li>Red Pepper Flakes</li>
+                <li>1 Egg</li>
+                
+            </ul>
+
+        </div>
+
+        <div class="post-engagement">
+            <div class="texteng">
+                <img class="heart" src="img/savedicong.png" alt="saved icon">
+                <p>324 Likes</p>
+            </div>
+            <div class="texteng">
+                <img class="iconengf" src="img/flagicon.png" alt="flag icon">
+                <p>241 Saves</p>
+            </div>
+            <div class="texteng">
+                <img class="iconeng" src="img/cookedicon.png" alt="cooked icon">      
+                <p>94 Recipes Made</p>  
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!-- POST 4 -->
+<div class="post-template">
+    <div class="post-image">
+        <!-- <img class="post-saved" src="img/savedicon.png" alt="saved icon"> -->
+        <img class="post-pic" src="img/post4/test.png" alt="post 4 test image">
+    </div>
+    
+
+    <div class="post-description">
+        <div class="post-user">
+            <img class="post-user-image" src="img/post4/userimage.png" alt="post 4 test user image">
+            <div class="post-user-info">
+                <h2 class="post-user-name">Harry Aster</h2>
+                <p>@cookwithharry</p>
+            </div>
+        </div>
+
+        <div class="post-caption">
+            <h3>Chicken kebabs, also known as chicken skewers or chicken kabobs, are a flavorful and versatile dish</h3>
+
+        </div>
+
+        <div class="post-tags">
+            <div class="time">
+                <img class="post-icons" src="img/timeicon.png" alt="time icon">
+                <p>35 min</p>
+            </div>
+
+        </div>
+
+        <div class="post-ingredients">
+            <h3>Ingredient List</h3>
+            <ul>
+                <li>2 pounds of boneless chicken</li>
+                <li>1 ripe Avocado</li>
+                <li>1 teaspoon ground coriander</li>
+                <li>1 teaspoon ground cumin</li>
+                <li>1 teaspoon ground turmeric</li>
+                <li>1 teaspoon salt</li>
+                <li>Juice of 1 lemon</li>
+                <li>1 teaspoon ground paprika</li>
+                <li>3 cloves of garlic, minced</li>
+                <li>3 tablespoons plain Greek yogurt</li>
+                <li>1/4 cup olive oil</li>
+                
+            </ul>
+
+        </div>
+
+        <div class="post-engagement">
+            <div class="texteng">
+                <img class="heart" src="img/savedicong.png" alt="saved icon">
+                <p>49 Likes</p>
+            </div>
+            <div class="texteng">
+                <img class="iconengf" src="img/flagicon.png" alt="flag icon">
+                <p>21 Saves</p>
+            </div>
+            <div class="texteng">
+                <img class="iconeng" src="img/cookedicon.png" alt="cooked icon">      
+                <p>4 Recipes Made</p>  
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- POST 5 -->
+<div class="post-template">
+    <div class="post-image">
+        <!-- <img class="post-saved" src="img/savedicon.png" alt="saved icon"> -->
+        <img class="post-pic" src="img/post5/test.png" alt="post 5 test image">
+    </div>
+    
+
+    <div class="post-description">
+        <div class="post-user">
+            <img class="post-user-image" src="img/post5/userimage.png" alt="post 5 test user image">
+            <div class="post-user-info">
+                <h2 class="post-user-name">Jonas Swan</h2>
+                <p>@chefjonas</p>
+            </div>
+        </div>
+
+        <div class="post-caption">
+            <h3>Pad Thai is a popular Thai stir-fried noodle dish that's both flavorful and satisfying</h3>
+
+        </div>
+
+        <div class="post-tags">
+            <div class="time">
+                <img class="post-icons" src="img/timeicon.png" alt="time icon">
+                <p>30 min</p>
+            </div>
+
+        </div>
+
+        <div class="post-ingredients">
+            <h3>Ingredient List</h3>
+            <ul>
+                <li>8 oz flat rice noodles</li>
+                <li>1/2 cupt of Spinach</li>
+                <li>2 cloves of garlic, minced</li>
+                <li>2 tablespoons vegatable oil</li>
+                
+            </ul>
+
+        </div>
+
+        <div class="post-engagement">
+            <div class="texteng">
+                <img class="heart" src="img/savedicong.png" alt="saved icon">
+                <p>93 Likes</p>
+            </div>
+            <div class="texteng">
+                <img class="iconengf" src="img/flagicon.png" alt="flag icon">
+                <p>140 Saves</p>
+            </div>
+            <div class="texteng">
+                <img class="iconeng" src="img/cookedicon.png" alt="cooked icon">      
+                <p>29 Recipes Made</p>  
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- POST 6 -->
+<div class="post-template">
+    <div class="post-image">
+        <!-- <img class="post-saved" src="img/savedicon.png" alt="saved icon"> -->
+        <img class="post-pic" src="img/post6/test.png" alt="post 6 test image">
+    </div>
+    
+
+    <div class="post-description">
+        <div class="post-user">
+            <img class="post-user-image" src="img/post6/userimage.png" alt="post 6 test user image">
+            <div class="post-user-info">
+                <h2 class="post-user-name">Elio Marcus</h2>
+                <p>@eliolikestocook</p>
+            </div>
+        </div>
+
+        <div class="post-caption">
+            <h3>Creamy salmon dishes are rich, satisfying, and full of flavor</h3>
+
+        </div>
+
+        <div class="post-tags">
+            <div class="time">
+                <img class="post-icons" src="img/timeicon.png" alt="time icon">
+                <p>45 min</p>
+            </div>
+
+        </div>
+
+        <div class="post-ingredients">
+            <h3>Ingredient List</h3>
+            <ul>
+                <li>1 salmon fillet</li>
+                <li>2 tablesppons olive oil</li>
+                <li>4 cloves of garlic, minced</li>
+                <li>1 cup heavy cream</li>
+                <li>1/2 cup grated cheese</li>
+                <li>1 tablesppon of lemon juice</li>
+                <li>1 teaspoon dried thyme</li>
+
+            </ul>
+
+        </div>
+
+        <div class="post-engagement">
+            <div class="texteng">
+                <img class="heart" src="img/savedicong.png" alt="saved icon">
+                <p>93 Likes</p>
+            </div>
+            <div class="texteng">
+                <img class="iconengf" src="img/flagicon.png" alt="flag icon">
+                <p>140 Saves</p>
+            </div>
+            <div class="texteng">
+                <img class="iconeng" src="img/cookedicon.png" alt="cooked icon">      
+                <p>29 Recipes Made</p>  
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!-- POST 7 -->
+<div class="post-template">
+    <div class="post-image">
+        <!-- <img class="post-saved" src="img/savedicon.png" alt="saved icon"> -->
+        <img class="post-pic" src="img/post7/test.png" alt="post 7 test image">
+    </div>
+    
+
+    <div class="post-description">
+        <div class="post-user">
+            <img class="post-user-image" src="img/post7/userimage.png" alt="post 7 test user image">
+            <div class="post-user-info">
+                <h2 class="post-user-name">Sammy Daniels</h2>
+                <p>@samcooksalot</p>
+            </div>
+        </div>
+
+        <div class="post-caption">
+            <h3>Chickpea salad is a refreshing and nutritious dish that can be served as a side or a light main course.</h3>
+
+        </div>
+
+        <div class="post-tags">
+            <div class="time">
+                <img class="post-icons" src="img/timeicon.png" alt="time icon">
+                <p>10 min</p>
+            </div>
+
+        </div>
+
+        <div class="post-ingredients">
+            <h3>Ingredient List</h3>
+            <ul>
+                <li>2 cans of chickpeas</li>
+                <li>1 cucumber, diced</li>
+                <li>1 cup of tomatoes</li>
+                <li>1/2 red onions</li>
+                <li>1/4 cup of fresh parsley, chopped</li>
+                <li>1/2 cup of feta cheese</li>
+                <li>1/4 cup extra-virgin olive oil</li>
+                <li>1 close garlic, imnced</li>
+            </ul>
+        </div>
+
+        <div class="post-engagement">
+            <div class="texteng">
+                <img class="heart" src="img/savedicong.png" alt="saved icon">
+                <p>17 Likes</p>
+            </div>
+            <div class="texteng">
+                <img class="iconengf" src="img/flagicon.png" alt="flag icon">
+                <p>4 Saves</p>
+            </div>
+            <div class="texteng">
+                <img class="iconeng" src="img/cookedicon.png" alt="cooked icon">      
+                <p>0 Recipes Made</p>  
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<!-- POST 8 -->
+<div class="post-template">
+    <div class="post-image">
+        <!-- <img class="post-saved" src="img/savedicon.png" alt="saved icon"> -->
+        <img class="post-pic" src="img/post8/test.png" alt="post 8 test image">
+    </div>
+    
+
+    <div class="post-description">
+        <div class="post-user">
+            <img class="post-user-image" src="img/post8/userimage.png" alt="post 8 test user image">
+            <div class="post-user-info">
+                <h2 class="post-user-name">Maria Palson</h2>
+                <p>@marriedtocooking</p>
+            </div>
+        </div>
+
+        <div class="post-caption">
+            <h3>Pumpkin soup is a warm and comforting dish, perfect for fall or any time you're in the mood for a hearty soup</h3>
+
+        </div>
+
+        <div class="post-tags">
+            <div class="time">
+                <img class="post-icons" src="img/timeicon.png" alt="time icon">
+                <p>1 hr</p>
+            </div>
+
+        </div>
+
+        <div class="post-ingredients">
+            <h3>Ingredient List</h3>
+            <ul>
+                <li>1 medium-sized pumpkin</li>
+                <li>1 large onion, chopped</li>
+                <li>2 carrots</li>
+                <li>2 cloves garlic, minced</li>
+                <li>1 apple</li>
+                <li>4 cups of chicken broth</li>
+                <li>1/2 teaspoon ground ginger</li>
+                <li>2 tablespoons olive oil</li>
+                <li>Salt and pepper to taste</li>
+
+                
+            </ul>
+
+        </div>
+
+        <div class="post-engagement">
+            <div class="texteng">
+                <img class="heart" src="img/savedicong.png" alt="saved icon">
+                <p>39 Likes</p>
+            </div>
+            <div class="texteng">
+                <img class="iconengf" src="img/flagicon.png" alt="flag icon">
+                <p>13 Saves</p>
+            </div>
+            <div class="texteng">
+                <img class="iconeng" src="img/cookedicon.png" alt="cooked icon">      
+                <p>2 Recipes Made</p>  
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    var saveIcons = document.querySelectorAll('.heart');
+    var flagIcons = document.querySelectorAll('.iconengf');
+    var filledSave = 'img/saved-fill.svg';
+    var filledFlag = 'img/flag-fill.svg';
+
+    // START HEART ICONS
+    saveIcons.forEach(function (saveIcon) {
+        // Hover Functions
+        saveIcon.addEventListener('mouseover', function () {
+            if (!saveIcon.classList.contains('liked')) {
+                saveIcon.src = filledSave;
+            }
+        });
+
+        saveIcon.addEventListener('mouseout', function () {
+            if (!saveIcon.classList.contains('liked')) {
+                saveIcon.src = 'img/savedicong.png';
+            }
+        });
+
+        // Click Functions
+        saveIcon.addEventListener('click', function () {
+            var postDiv = saveIcon.closest('.texteng');
+
+            if (postDiv) {
+                var heartText = postDiv.querySelector('p');
+                var likesCount = parseInt(heartText.textContent);
+
+                if (saveIcon.classList.contains('liked')) {
+                    saveIcon.src = 'img/savedicong.png';
+                    saveIcon.classList.remove('liked');
+                    heartText.textContent = likesCount - 1 + ' Likes';
+                } else {
+                    saveIcon.src = filledSave;
+                    saveIcon.classList.add('liked');
+                    heartText.textContent = likesCount + 1 + ' Likes';
+                }
+            }
+        });
+    });
+    // END HEART ICONS
+
+    // START FLAG ICONS
+    flagIcons.forEach(function (flagIcon) {
+        // Hover Functions
+        flagIcon.addEventListener('mouseover', function () {
+            if (!flagIcon.classList.contains('saved')) {
+                flagIcon.src = filledFlag;
+            }
+        });
+
+        flagIcon.addEventListener('mouseout', function () {
+            if (!flagIcon.classList.contains('saved')) {
+                flagIcon.src = 'img/flagicon.png';
+            }
+        });
+
+        // Click Functions
+        flagIcon.addEventListener('click', function () {
+            var postDivf = flagIcon.closest('.texteng');
+
+            if (postDivf) {
+                var flagText = postDivf.querySelector('p');
+                var savesCount = parseInt(flagText.textContent);
+
+                if (flagIcon.classList.contains('saved')) {
+                    flagIcon.src = 'img/flagicon.png';
+                    flagIcon.classList.remove('saved');
+                    flagText.textContent = savesCount - 1 + ' Saves';
+                } else {
+                    flagIcon.src = filledFlag;
+                    flagIcon.classList.add('saved');
+                    flagText.textContent = savesCount + 1 + ' Saves';
+                }
+            }
+        });
+    });
+    // END FLAG ICONS
+
+</script>
+
+
+</body>
+<html>	
